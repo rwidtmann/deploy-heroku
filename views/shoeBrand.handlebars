@@ -1,0 +1,15 @@
+
+
+
+<section class="container">
+  <h3 class="shoe-brand">{{brand.brand_name}}</h3>
+  {{#if loggedIn}}
+  <section class="flex-row justify-center">
+    {{#each brand.styles as |style|}}
+    {{> shoeStyle-details}}
+    {{/each}}
+  </section>
+</section>
+{{else}}
+<a href="/login">You must login first to view this page</a>
+{{/if}}
